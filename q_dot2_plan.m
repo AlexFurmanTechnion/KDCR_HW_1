@@ -32,7 +32,7 @@ switch method
         for i=1:colnum
             [~,JL(:,:,i)] = jacobian_mat_simplify(q(:,i), params);
             [~, JL_dot(:,:,i)] = jacobian_mat_dot(q(:,i),q_dot(:,i),params);
-            q_dot2(:,i) = inv(JL(:,:,i))*(a(:,i)-JL_dot(:,:,i)*q(:,i));
+            q_dot2(:,i) = inv(JL(:,:,i))*(a(:,i)-JL_dot(:,:,i)*q_dot(:,i));
         end
 
 end
